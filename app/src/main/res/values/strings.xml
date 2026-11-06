@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kite</string>
+    <string name="tagline">把想法交给它</string>
+    <string name="new_task">新任务</string>
+    <string name="task_hint">描述你想做的事，或贴一段代码…</string>
+    <string name="sessions">最近</string>
+    <string name="settings">设置</string>
+    <string name="send">发送</string>
+    <string name="stop">停止</string>
+    <string name="model">模型</string>
+    <string name="provider">服务</string>
+    <string name="api_key">API Key</string>
+    <string name="base_url">接口地址</string>
+    <string name="save">保存</string>
+    <string name="test">测试连接</string>
+    <string name="tools">工具</string>
+    <string name="shell_tool">允许执行 Shell</string>
+    <string name="about">关于</string>
+    <string name="privacy">隐私</string>
+    <string name="workspace">工作区</string>
+    <string name="thinking">思考过程</string>
+    <string name="tool_running">执行中…</string>
+    <string name="tool_done">完成</string>
+    <string name="tool_failed">失败</string>
+    <string name="accessibility_description">允许 Kite 读取当前屏幕上的文字和按钮，并模拟点击、输入、滚动。仅个人版使用，可随时在系统设置里关闭。</string>
+</resources>

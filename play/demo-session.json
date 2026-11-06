@@ -1,0 +1,49 @@
+{
+  "id": "demo-pomodoro",
+  "title": "做一个番茄钟网页",
+  "createdAt": 1793835793477,
+  "updatedAt": 1793837593477,
+  "messages": [
+    {
+      "id": "demo-m1",
+      "role": "USER",
+      "content": "做一个番茄钟网页，放在工作区里。要能开始、暂停和重置，手机浏览器直接能打开。",
+      "createdAt": 1793835793477,
+      "error": false,
+      "toolCalls": []
+    },
+    {
+      "id": "demo-m2",
+      "role": "ASSISTANT",
+      "content": "",
+      "createdAt": 1793835853477,
+      "error": false,
+      "toolCalls": [
+        {
+          "id": "call_demo_1",
+          "name": "write_file",
+          "arguments": "{\"path\":\"pomodoro/index.html\",\"content\":\"<!doctype html>\\n<html lang=\\\"zh\\\">\\n<head>\\n  <meta charset=\\\"utf-8\\\">\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1\\\">\\n  <title>番茄钟</title>\\n  <style>\\n    body { margin:0; font-family:system-ui,sans-serif; background:#0b0d11; color:#f4efe6;\\n           display:grid; place-items:center; height:100vh; }\\n    .time { font-size:76px; font-weight:800; letter-spacing:-3px; }\\n    button { border:0; border-radius:16px; padding:12px 18px; margin:4px;\\n             background:#ff6b3d; color:#0b0d11; font-weight:700; }\\n  </style>\\n</head>\\n<body>\\n  <div>\\n    <div class=\\\"time\\\" id=\\\"t\\\">25:00</div>\\n    <button onclick=\\\"toggle()\\\">开始 / 暂停</button>\\n    <button onclick=\\\"reset()\\\">重置</button>\\n  </div>\\n  <script>\\n    let left = 25 * 60, timer = null;\\n    const t = document.getElementById('t');\\n    function draw() { t.textContent = String(Math.floor(left / 60)).padStart(2, '0') + ':' + String(left % 60).padStart(2, '0'); }\\n    function toggle() {\\n      if (timer) { clearInterval(timer); timer = null; return; }\\n      timer = setInterval(() => { if (left > 0) left--; draw(); }, 1000);\\n    }\\n    function reset() { clearInterval(timer); timer = null; left = 25 * 60; draw(); }\\n    draw();\\n  </script>\\n</body>\\n</html>\"}"
+        }
+      ]
+    },
+    {
+      "id": "demo-m3",
+      "role": "TOOL",
+      "content": "已写入 1286 字符到 pomodoro/index.html",
+      "createdAt": 1793835854277,
+      "error": false,
+      "toolCalls": [],
+      "toolCallId": "call_demo_1",
+      "toolName": "write_file",
+      "toolOk": true
+    },
+    {
+      "id": "demo-m4",
+      "role": "ASSISTANT",
+      "content": "番茄钟已经做好了，文件在 `pomodoro/index.html`。\n\n包含：\n- 25 分钟专注计时，开始 / 暂停\n- 一键重置\n- 深色界面，手机浏览器直接打开就能用\n\n需要我再加上「专注结束提示音」或「自定义时长」吗？",
+      "createdAt": 1793835913477,
+      "error": false,
+      "toolCalls": []
+    }
+  ]
+}

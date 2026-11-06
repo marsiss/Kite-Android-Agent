@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 报告安全问题
+    url: https://github.com/marsiss/Kite-Android-Agent/security/advisories/new
+    about: 权限绕过、密钥泄漏、任意文件读写等漏洞请走私密渠道，不要开公开 issue。
+  - name: 💬 提问与讨论
+    url: https://github.com/marsiss/Kite-Android-Agent/discussions
+    about: 使用问题、配置求助、想法交流请走 Discussions。
+  - name: 📖 先读文档
+    url: https://github.com/marsiss/Kite-Android-Agent#readme
+    about: 构建方法、已知限制、Roadmap 都在 README 里。

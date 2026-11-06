@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kite 隐私政策</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #0b0d11; color: #f4efe6;
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+  }
+  .bar { height: 6px; background: #ff6b3d; }
+  main { max-width: 760px; margin: 0 auto; padding: 56px 24px 96px; }
+  .brand { display: flex; align-items: center; gap: 10px; margin-bottom: 36px; }
+  .mark { width: 26px; height: 32px; background: #ff6b3d;
+          clip-path: polygon(50% 0, 100% 40%, 50% 100%, 0 40%); }
+  .brand span { font-weight: 800; letter-spacing: 4px; font-size: 14px; }
+  h1 { font-size: 34px; letter-spacing: -1px; margin: 0 0 8px; }
+  .meta { color: #8a8f99; font-size: 13px; margin-bottom: 36px; }
+  h2 { font-size: 18px; margin: 34px 0 10px; color: #ff6b3d; }
+  p, li { color: #d8d3ca; }
+  ul { padding-left: 20px; }
+  code { color: #ffb59d; }
+  a { color: #ff6b3d; }
+  footer { margin-top: 56px; color: #8a8f99; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="bar"></div>
+<main>
+  <div class="brand"><div class="mark"></div><span>KITE</span></div>
+  <h1>隐私政策</h1>
+  <div class="meta">生效日期：2026-11-05 · 包名：app.kite.agent</div>
+
+  <p>Kite 是一个运行在 Android 手机上的 AI 智能体。我们尽量让数据留在你的设备上。</p>
+
+  <h2>我们不收集什么</h2>
+  <ul>
+    <li>不要求注册账号。</li>
+    <li>不收集姓名、手机号、通讯录、位置、设备标识符。</li>
+    <li>不集成广告 SDK、统计 SDK 或崩溃上报服务。</li>
+    <li>不把会话、文件、API Key 上传到我们的服务器。</li>
+  </ul>
+
+  <h2>数据保存在哪里</h2>
+  <ul>
+    <li>会话记录与工作区文件：应用私有目录。</li>
+    <li>API Key：Android Keystore AES-GCM 加密后保存在本机。</li>
+    <li>卸载应用会删除上述本机数据。</li>
+  </ul>
+
+  <h2>数据会发给谁</h2>
+  <p>Kite 采用「自带 Key」模式。你填写模型服务的接口地址和 Key，Kite 会把提示词、会话上下文和工具结果发送到<strong>你配置的服务商</strong>，用于完成请求。这些请求受该服务商的隐私政策约束。</p>
+  <p>如果接口地址是 <code>http://</code>，流量可能是明文；请自行评估网络风险。</p>
+
+  <h2>设备权限</h2>
+  <ul>
+    <li><strong>INTERNET / ACCESS_NETWORK_STATE</strong>：调用模型接口、抓取网页。</li>
+    <li><strong>POST_NOTIFICATIONS</strong>：任务执行时的前台通知（Android 13+，可选）。</li>
+    <li><strong>FOREGROUND_SERVICE / DATA_SYNC</strong>：任务执行期间保活（可选）。</li>
+  </ul>
+  <p>Kite 不申请存储、相机、麦克风、位置、通讯录权限。</p>
+
+  <h2>Shell 工具</h2>
+  <p>Shell 默认关闭。开启后，模型生成的命令在应用沙盒内通过 <code>/system/bin/sh</code> 执行，工作目录限制在工作区；不获取 root，不访问其他应用私有数据。</p>
+
+  <h2>个人版说明</h2>
+  <p>Google Play 上架的是 <code>release</code> 版，只申请联网、通知和前台服务权限。</p>
+  <p>你自己侧载的 <code>personal</code> 版会额外声明相机、麦克风、定位、通讯录、日历、短信、通话记录、电话状态、身体传感器、活动识别、蓝牙、媒体、所有文件访问等权限，并提供 Root / Shizuku Shell 入口。这些权限不会自动生效，必须由你在系统弹窗或设置里逐项同意；Root 需要手机已 root，Shizuku 只是 ADB shell 权限。个人版不建议分发或上传 Google Play。</p>
+
+  <h2>儿童</h2>
+  <p>Kite 面向 13 岁及以上用户，不面向儿童设计。</p>
+
+  <h2>删除数据</h2>
+  <ul>
+    <li>长按任务可删除单个会话。</li>
+    <li>系统设置 → 应用 → Kite → 清除数据，或直接卸载。</li>
+    <li>个人版切到 <code>/sdcard/Kite</code> 后，该目录不会随卸载删除，需要手动清理。</li>
+  </ul>
+
+  <h2>联系</h2>
+  <p>开发者：[开发者名称] · 邮箱：[联系邮箱]</p>
+
+  <footer>Kite · Android AI Agent</footer>
+</main>
+</body>
+</html>

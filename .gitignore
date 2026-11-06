@@ -1,0 +1,43 @@
+# ---- Gradle / Android ----
+.gradle/
+.kotlin/
+build/
+app/build/
+captures/
+.cxx/
+
+# ---- Local machine config (NEVER commit) ----
+local.properties
+keystore.properties
+
+# ---- Signing material (NEVER commit) ----
+*.keystore
+*.jks
+*.p12
+*.pepk
+
+# ---- Build artifacts ----
+dist/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# ---- IDE ----
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+out/
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Logs / temp ----
+*.log
+*.hprof
+last-crash.txt

@@ -1,0 +1,115 @@
+name: Bug report
+description: 报告一个可复现的问题
+title: "[Bug] "
+labels: [ "bug" ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请先确认你的问题**不是**下面这几类，它们有专门的处理方式：
+
+        - 安全问题（权限绕过、密钥泄漏、任意文件读写）→ 请走 [SECURITY.md](../blob/main/SECURITY.md)，**不要开公开 issue**
+        - 模型不听话 / 回答质量差 → 这是模型和提示词的问题，不是 App 的 bug
+        - 华为等锁定 Bootloader 的设备无法 root → 见 README「已知限制」，这是设备限制
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已经搜索过现有 issue，没有重复
+          required: true
+        - label: 我使用的是最新版本或 main 分支
+          required: true
+
+  - type: dropdown
+    id: variant
+    attributes:
+      label: 版本
+      description: 你装的是哪个构建？
+      options:
+        - Play 版（release）
+        - 个人版（personal）
+        - 自己从源码构建的
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 版本号 / commit
+      description: "`设置 → 关于` 里的版本号，或 commit hash"
+      placeholder: "0.1.0 / a1b2c3d"
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: 设备与系统
+      placeholder: "小米 14 / Android 15 (API 35) / HyperOS 2.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 问题描述
+      description: 发生了什么？你期望发生什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开 ...
+        2. 点击 ...
+        3. 看到 ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志 / 截图
+      description: |
+        崩溃日志位置：应用私有目录 `files/last-crash.txt`（可用 `adb shell run-as app.kite.agent cat files/last-crash.txt` 导出）。
+        如果是模型/工具相关，请附上聊天页里的工具调用卡片截图。
+      render: text
+    validations:
+      required: false
+
+  - type: dropdown
+    id: provider
+    attributes:
+      label: 模型服务商
+      description: 问题是否与特定服务商有关？
+      options:
+        - 与模型服务商无关
+        - DeepSeek
+        - OpenAI
+        - OpenRouter
+        - 硅基流动 / 智谱 / 其他国内服务
+        - Ollama / 本地模型
+        - 自定义 Base URL
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: features
+    attributes:
+      label: 涉及的功能
+      options:
+        - label: 工具调用 / Agent 循环
+        - label: 文件读写 / 工作区
+        - label: 文档解析（PDF / Office）
+        - label: Shell / Shizuku
+        - label: 无障碍跨 App 自动化
+        - label: MCP
+        - label: 技能（Skills）
+        - label: 定时任务
+        - label: 浏览器自动化
+        - label: 语音输入
+        - label: 界面 / 主题

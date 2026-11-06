@@ -1,0 +1,55 @@
+Kite — Android 移动智能体
+Copyright 2026 Kite contributors
+
+This product is licensed under the Apache License, Version 2.0.
+See the LICENSE file for the full license text.
+
+--------------------------------------------------------------------------------
+THIRD-PARTY SOFTWARE
+--------------------------------------------------------------------------------
+
+Kite bundles or links against the following third-party components. Each is
+provided under its own license, and the copyright of each remains with its
+respective owners.
+
+  Kotlin / kotlinx.coroutines            Apache-2.0   JetBrains
+  AndroidX / Jetpack (Core, Activity,    Apache-2.0   The Android Open Source
+    DocumentFile, WorkManager, Lifecycle)              Project / Google
+  Jetpack Compose + Material 3           Apache-2.0   The Android Open Source
+                                                      Project / Google
+  OkHttp                                 Apache-2.0   Square, Inc.
+  Gson                                   Apache-2.0   Google LLC
+  Jsoup                                  MIT          Jonathan Hedley
+  PDFBox-Android                         Apache-2.0   Tom Roush
+                                                      (Apache PDFBox: ASF)
+  Shizuku API                            Apache-2.0   RikkaApps
+
+Full dependency list with versions and purposes: see THIRD-PARTY.md
+In-app attribution screen: 设置 → 关于 → 开源许可
+
+--------------------------------------------------------------------------------
+REFERENCE PROJECTS (no code copied)
+--------------------------------------------------------------------------------
+
+Kite is an independent implementation. The following projects were studied for
+feature shape, protocol behaviour and architecture. No source code was copied
+from them.
+
+  Mika                 Apache-2.0   https://github.com/wangzan101/Mika
+  Operit               LGPL-3.0     https://github.com/AAswordman/Operit
+  OpenCode             MIT          https://github.com/anomalyco/opencode
+
+Projects under evaluation (not yet a dependency):
+
+  Koog                 Apache-2.0   https://github.com/JetBrains/koog
+  MCP Kotlin SDK       Apache-2.0   https://github.com/modelcontextprotocol/kotlin-sdk
+
+--------------------------------------------------------------------------------
+TRADEMARKS
+--------------------------------------------------------------------------------
+
+"KITT" and "Knight Rider" are trademarks of their respective owners. Kite's
+visual design is an original homage; it contains no KITT artwork, logos or
+imagery. "Android", "Google Play" and "Kotlin" are trademarks of their
+respective owners. Kite is not affiliated with, endorsed by, or sponsored by
+any of the trademark holders listed above.

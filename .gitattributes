@@ -1,0 +1,29 @@
+# Normalise line endings so Windows and Unix contributors do not fight.
+* text=auto eol=lf
+
+# Gradle wrapper must stay executable on Unix.
+gradlew text eol=lf
+
+# Windows-only scripts keep CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary assets — never touch these.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.ttf binary
+*.otf binary
+*.jar binary
+*.keystore binary
+*.jks binary
+
+# Keep generated/vendored files out of diffs and language stats.
+app/build/** linguist-generated=true
+gradle/wrapper/gradle-wrapper.jar binary linguist-generated=true
+play/*.png linguist-documentation=true
+logo/*.png linguist-documentation=true
