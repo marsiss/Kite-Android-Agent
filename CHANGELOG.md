@@ -72,7 +72,7 @@
 
 **构建**
 - 双构建变体：`release`（Play，6 权限）与 `personal`（侧载，54 权限）
-- Play 商店素材生成脚本（`make-play-assets.py`）
+- Play 商店素材生成脚本（`tools/make-play-assets.py`）
 - 本地模型 Mock 服务（`mock/server.js`）
 
 ### 已知限制
